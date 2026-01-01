@@ -2,7 +2,7 @@
 
 client_id = "083c9ee05d73868b59a538b8c094bd38"
 name = "Ringbuilder-app"
-application_url = "https://tribute-cap-creative-stopped.trycloudflare.com"
+application_url = "https://ringbuilder-dynamic.onrender.com"
 embedded = true
 handle = "ringbuilder-app"
 
@@ -23,9 +23,9 @@ scopes = "read_content,read_online_store_pages,unauthenticated_read_content,writ
 
 [auth]
 redirect_urls = [
-  "https://tribute-cap-creative-stopped.trycloudflare.com/auth/callback",
-  "https://tribute-cap-creative-stopped.trycloudflare.com/auth/shopify/callback",
-  "https://tribute-cap-creative-stopped.trycloudflare.com/api/auth/callback"
+  "https://ringbuilder-dynamic.onrender.com/auth/callback",
+  "https://ringbuilder-dynamic.onrender.com/auth/shopify/callback",
+  "https://ringbuilder-dynamic.onrender.com/api/auth/callback"
 ]
 
 [pos]

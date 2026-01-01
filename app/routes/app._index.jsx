@@ -12,6 +12,10 @@ import {
   Loading
 } from "@shopify/polaris";
 
+// SHOPIFY_API_KEY=083c9ee05d73868b59a538b8c094bd38
+// SHOPIFY_API_SECRET=e148a4d63d72eab65fe445ef8d1d4e20
+// SCOPES=read_content,read_online_store_pages,unauthenticated_read_content,write_products
+
 export async function loader({ request }) {
   const { admin } = await authenticate.admin(request);
 
