@@ -17,7 +17,7 @@ export const GlobleVal = () => {
 
     const DefaultImageUrl = 'https://cdn.shopify.com/s/files/1/0709/4193/3758/files'
 
-    const BACKEND_URL = "https://latest-v-backend.onrender.com/api/v1"
+    const BACKEND_URL = "https://diamondbackend-pq1n.onrender.com/api/v1"
 
     return { shapes, labs, clarityList, colorList, cutList, DefaultImageUrl, fluorescenceList, polishList, symmertyList, fake_data, BACKEND_URL }
 }
