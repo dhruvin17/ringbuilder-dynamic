@@ -1,0 +1,483 @@
+@import "tailwindcss";
+
+
+.grid_step{
+    display: grid;
+}
+
+.stepBuilder-bg-image{
+  background-image: url('https://cdn.shopify.com/s/files/1/0901/4532/5401/files/stepmenu.png');
+}
+
+  /* .noUi-connect {
+    background: #ebe0c5 !important;
+  }
+  
+.noUi-horizontal {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.noUi-horizontal .noUi-handle::before,
+.noUi-horizontal .noUi-handle::after {
+  display: none;
+}
+
+.noUi-target,
+.noUi-base,
+.noUi-connects {
+  position: unset !important;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 18px !important;
+  height: 40px !important;
+  top: -12px !important;
+  right: -13px !important;
+  background: #fff !important;
+  cursor: pointer !important;
+} */
+
+/* range slider css */
+.noUi-connect {
+  background: #545454 !important;
+  display: inline !important;
+}
+.noUi-target {
+  background: #e8e8e8 !important;
+  border: none !important;
+}
+.noUi-horizontal {
+  height: 8px !important;
+  margin: 10px 0;
+}
+.noUi-target,.noUi-base, .noUi-connects{
+  position: unset !important;
+}
+.noUi-horizontal .noUi-handle {
+  width: 24px !important;
+  height: 24px !important;
+  top: -9px !important;
+  right: -10px !important;
+  border-radius: 22px;
+  background: white;
+  border: 2px solid;
+  border-color: #545454;
+  box-shadow: unset;
+  cursor: pointer;
+}
+.noUi-horizontal .noUi-handle::before, .noUi-horizontal .noUi-handle::after{
+  display: none;
+}
+
+/* @media(max-width:640px){
+  .noUi-horizontal .noUi-handle {
+    width: 30px !important;
+    height: 30px !important;
+    top: -12px !important;
+    right: -13px !important;
+  }
+} */
+
+
+/* Remove the number input spinners in Webkit browsers (Chrome, Safari) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove the number input spinners in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+/* Scrollbar container */
+::-webkit-scrollbar {
+  width: 2px; /* Vertical scrollbar width */
+  height: 2px; /* Horizontal scrollbar height */
+}
+
+/* Scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar color */
+  border-radius: 10px; /* Round edges */
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+
+/* ************** compare-diamonds start *************** */
+
+.compare-row {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+  }
+
+  
+.compare .compare-col:first-child .compare-row>:first-child {
+  display: none;
+}
+.compare .compare-col:nth-child(2) .compare-row>:first-child {
+  visibility: visible;
+}
+.compare .compare-col:last-child .compare-row>:last-child {
+  display: none;
+}
+.ltm20 {	
+  left: -130px	
+}	
+.lt20 {	
+  left: 130px	
+}	
+.rltm20 {	
+  left: -260px	
+}	
+.rlt20 {	
+  left: 260px	
+}	
+.wzero {	
+  width: 0 !important;	
+}	
+@media screen and (min-width: 640px) {	
+  .ltm20 {	
+    left: -200px	
+  }	
+  .lt20 {	
+    left: 200px	
+  }	
+  .rltm20 {	
+    left: -400px	
+  }	
+  .rlt20 {	
+    left: 400px	
+  }	
+}
+
+/* ************** compare-diamonds end *************** */
+
+
+.unset-img1 > span:first-child {
+  position: relative !important;
+}
+
+
+/* swiper button */
+
+.swiper-button-prev {
+  background-image: url('https://cdn.shopify.com/s/files/1/0901/4532/5401/files/arrow-left.jpg');
+}
+.swiper-button-next{
+  background-image: url('https://cdn.shopify.com/s/files/1/0901/4532/5401/files/arrow-right.png');
+}
+
+.swiper-button-prev, .swiper-button-next{
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+   display: block !important;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+.swiper-pagination-bullet-active{
+  background-color: #000 !important;
+}
+
+.new .swiper-button-next,.new .swiper-button-prev{
+  top: -12%;
+}
+
+.new .swiper-button-prev {
+  left: unset !important;
+  right: 44px !important;
+}
+
+.active .swiper-slide {
+  border: 1px solid #d0d0d0;
+}
+
+.active .swiper-slide-thumb-active {
+  border: 1px solid #000;
+}
+
+.thumb-swipe >.swiper-wrapper {
+  transform: translate3d(0px, 0, 0) !important;
+}
+
+/* swiper button end */
+
+
+/*Single diamond  Swiper Gallery Parameter CSS */
+#RBC-T{
+  top: 32.9%;
+  left: 42%;
+}
+#RBC-D{
+  bottom: 43.9%;
+  right: 25%;
+}
+#RBC-C {
+  bottom: 33.5%;
+  right: 37%;
+}
+#RBC-G {
+  bottom: 34.5%;
+  left: 21%;
+}
+#RBC-W{
+  top: 27%;
+  left: 38%;
+}
+#RBC-L{
+  right: 21%;
+  bottom: 47.9%;
+}
+
+#PRI-T{
+  top: 32.8%;
+  left: 43%;
+}
+#PRI-D{
+  bottom: 43.9%;
+  right: 23%;
+}
+#PRI-C {
+  bottom: 33.5%;
+  right: 37%;
+}
+#PRI-G {
+  bottom: 34.5%;
+  left: 21%;
+}
+#PRI-W{
+  top: 27%;
+  left: 38%;
+}
+#PRI-L{
+  right: 21%;
+  bottom: 47.9%;
+}
+
+#CMB-T{
+  top: 34%;
+  left: 43%;
+}
+#CMB-D{
+  bottom: 40.9%;
+  right: 25%;
+}
+#CMB-C {
+  bottom: 33.5%;
+  right: 37%;
+}
+#CMB-G {
+  bottom: 34.5%;
+  left: 21%;
+}
+#CMB-W{
+  top: 31%;
+  left: 36%;
+}
+#CMB-L{
+  right: 20%;
+  bottom: 42.9%;
+}
+
+#SQE-T{
+  top: 32.9%;
+  left: 43%;
+}
+#SQE-D{
+  bottom: 40.9%;
+  right: 24%;
+}
+#SQE-C {
+  bottom: 33.5%;
+  right: 37%;
+}
+#SQE-G {
+  bottom: 34.5%;
+  left: 21%;
+}
+#SQE-W{
+  top: 22.2%;
+  left: 36%;
+}
+#SQE-L{
+  right: 15%;
+  bottom: 47.9%;
+}
+
+#MQ-T{
+  top: 34.7%;
+  left: 43%;
+}
+#MQ-D{
+  bottom: 43.9%;
+  right: 20%;
+}
+#MQ-C {
+  bottom: 37.1%;
+  right: 35%;
+}
+#MQ-G {
+  bottom: 35%;
+  left: 21%;
+}
+#MQ-W{
+  top: 32.3%;
+  left: 36%;
+}
+#MQ-L{
+  right: 21%;
+  bottom: 41.9%;
+}
+
+#OV-T{
+  top: 34.3%;
+  left: 43%;
+}
+#OV-D{
+  bottom: 41.9%;
+  right: 20%;
+}
+#OV-C {
+  bottom: 34.5%;
+  right: 35%;
+}
+#OV-G {
+  bottom: 35.5%;
+  left: 21%;
+}
+#OV-W{
+  top: 32.3%;
+  left: 34.5%;
+}
+#OV-L{
+  right: 22%;
+  bottom: 41.9%;
+}
+
+#RAD-T{
+  top: 32.5%;
+  left: 42%;
+}
+#RAD-D{
+  bottom: 43.9%;
+  right: 22%;
+}
+#RAD-C {
+  bottom: 34.5%;
+  right: 37%;
+}
+#RAD-G {
+  bottom: 34.5%;
+  left: 20%;
+}
+#RAD-W{
+  top: 29.3%;
+  left: 36%;
+}
+#RAD-L{
+  right: 15%;
+  bottom: 45.9%;
+}
+#PS-T{
+  top: 33%; 
+  left: 43%;
+}
+#PS-D{
+  bottom: 43.9%;
+  right: 19%;
+}
+#PS-C {
+  bottom: 36%;
+  right: 30%;
+}
+#PS-G {
+  bottom: 35.5%;
+  left: 21%;
+}
+#PS-W{
+  top: 32.3%;
+  left: 36%;
+}
+#PS-L{
+  right: 21%;
+  bottom: 42.9%;
+}
+#EMR-T{
+  top: 34.5%;
+  left: 43%;
+}
+#EMR-D{
+  bottom: 41.9%;
+  right: 20%;
+}
+#EMR-C {
+  bottom: 34.5%;
+  right: 35%;
+}
+#EMR-G {
+  bottom: 35%;
+  left: 21%;
+}
+#EMR-W{
+  top: 28.6%;
+  left: 36%;
+}
+#EMR-L{
+  right: 19%;
+  bottom: 46.9%;
+}
+#HS-T{
+  top: 32.9%;
+  left: 43%;
+}
+#HS-D{
+  bottom: 43.9%;
+  right: 25%;
+}
+#HS-C {
+  bottom: 34.1%;
+  right: 32%;
+}
+#HS-G {
+  bottom: 36%;
+  left: 21%;
+}
+#HS-W{
+  top: 32.2%;
+  left: 34.5%;
+}
+#HS-L{
+  right: 21%;
+  bottom: 40.9%;
+}
+
+/* Swiper Gallery Parameter CSS End */
+
+/* Avis plugin button */
+.avis-new-addcart-button {
+  width: 100%!important;
+}
+
+.ap-helptext{
+  margin-top: 10px !important; 
+}
+
+
+/* shopify svg theam issue */
+.breadcrumb .arrowrightw, .breadcrumb .arrowleftw , .copyright__content svg{
+  display: inline !important;
+}

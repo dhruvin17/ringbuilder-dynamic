@@ -1,0 +1,31 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "6f7087d0b0453e30b8bb20a85c1b8c13"
+name = "Ringbuilder Dynamic"
+application_url = "https://irc-las-keen-realtors.trycloudflare.com"
+embedded = true
+handle = "ringbuilder-dynamic"
+
+[build]
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2025-07"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,read_content,read_online_store_pages,unauthenticated_read_content"
+
+[auth]
+redirect_urls = ["https://irc-las-keen-realtors.trycloudflare.com/auth/callback", "https://irc-las-keen-realtors.trycloudflare.com/auth/shopify/callback", "https://irc-las-keen-realtors.trycloudflare.com/api/auth/callback"]
+
+[pos]
+embedded = false

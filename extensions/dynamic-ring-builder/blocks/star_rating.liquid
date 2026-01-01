@@ -1,0 +1,65 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const app = document.getElementById('root');
+    const mainContent = document.getElementById('MainContent');
+    const breadcrumbMain = document.getElementsByClassName('breadcrumb_main')[0]; // First .breadcrumb_main
+    const richTextSection =document.querySelector('.shopify-section.section[id^="shopify-section-template"][id*="__rich_text_"]'); 
+    // document.querySelector('[data-section-type="rich-text"], .shopify-section--rich-text'); // Common selectors for rich text
+
+    if (mainContent && app) {
+      if (richTextSection) {
+        // If Rich Text section exists, insert after it
+        richTextSection.parentNode.insertBefore(app, richTextSection.nextSibling);
+      } else if (breadcrumbMain) {
+        // Fallback to breadcrumb_main
+        breadcrumbMain.parentNode.insertBefore(app, breadcrumbMain.nextSibling);
+      } else {
+        // Fallback: insert at top of mainContent
+        mainContent.insertBefore(app, mainContent.firstChild);
+      }
+    }
+  });
+</script>
+
+<style>
+  #MainContent {
+  display: block;
+  min-height: 80vh;
+  width: 100%;
+}
+</style>
+
+<div
+  id="root"
+  data-collection="{{ collection.handle }}"
+  data-handle="{{ page.handle }}"
+  data-page="{{ template.name }}"
+  data-product-collection="{% for c in product.collections %}{{ c.handle }}{% unless forloop.last %},{% endunless %}{% endfor %}"
+  data-ringlist='{{ shop.metafields.custom.ringbuilderconfig.value.ring-list | escape }}'
+  data-ringdetails='{{ shop.metafields.custom.ringbuilderconfig.value.ring-detail | escape }}'
+  data-diamondlist='{{ shop.metafields.custom.ringbuilderconfig.value.diamond-list | escape }}'
+  data-diamonddetails='{{ shop.metafields.custom.ringbuilderconfig.value.diamond-details | escape }}'
+  data-completepage='{{ shop.metafields.custom.ringbuilderconfig.value.complete-ring | escape }}'
+></div>
+{{ 'index.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'index.js' | asset_url }}" defer></script>
+
+{%- if product -%}
+  {% assign collectionhandles = '' %}
+  {%- for collection in product.collections -%}
+    {% assign collectionhandles = collection.handle %}
+  {%- endfor -%}
+
+  {%- assign ringdetail_handle = shop.metafields.custom.ringbuilderconfig.value.ring-detail -%}
+
+  {%- if collectionhandles == ringdetail_handle -%}
+    <script src="{{ 'ring-detail.js' | asset_url }}" defer></script>
+  {%- endif -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Ring Builder Dynamic",
+  "target": "body",
+}
+{% endschema %}

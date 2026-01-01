@@ -1,0 +1,35 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "083c9ee05d73868b59a538b8c094bd38"
+name = "Ringbuilder-app"
+application_url = "https://tribute-cap-creative-stopped.trycloudflare.com"
+embedded = true
+handle = "ringbuilder-app"
+
+[webhooks]
+api_version = "2025-07"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_content,read_online_store_pages,unauthenticated_read_content,write_products"
+
+[auth]
+redirect_urls = [
+  "https://tribute-cap-creative-stopped.trycloudflare.com/auth/callback",
+  "https://tribute-cap-creative-stopped.trycloudflare.com/auth/shopify/callback",
+  "https://tribute-cap-creative-stopped.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
